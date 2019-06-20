@@ -1,0 +1,55 @@
+{
+    "name": "WDContractor",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "commissionPct",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "workdayNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contractorID",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "oneTimePayment",
+            "otherEntityRelationshipName": "wDContractor",
+            "relationshipName": "contractorID"
+        }
+    ],
+    "changelogDate": "20190620173147",
+    "entityTableName": "wd_contractor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

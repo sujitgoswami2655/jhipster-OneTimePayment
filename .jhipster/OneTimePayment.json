@@ -1,0 +1,41 @@
+{
+    "name": "OneTimePayment",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentDue",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "contractorID",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "wDContractor",
+            "otherEntityName": "wDContractor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "lDAPContractor",
+            "otherEntityName": "lDAPContractor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190620173149",
+    "entityTableName": "one_time_payment",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

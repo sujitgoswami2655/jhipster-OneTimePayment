@@ -4,6 +4,18 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     RouterModule.forChild([
+      {
+        path: 'wd-contractor',
+        loadChildren: './wd-contractor/wd-contractor.module#PocOneTimePaymentWDContractorModule'
+      },
+      {
+        path: 'ldap-contractor',
+        loadChildren: './ldap-contractor/ldap-contractor.module#PocOneTimePaymentLDAPContractorModule'
+      },
+      {
+        path: 'one-time-payment',
+        loadChildren: './one-time-payment/one-time-payment.module#PocOneTimePaymentOneTimePaymentModule'
+      }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
   ],

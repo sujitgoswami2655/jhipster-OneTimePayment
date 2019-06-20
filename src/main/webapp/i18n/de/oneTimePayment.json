@@ -1,0 +1,29 @@
+{
+  "pocOneTimePaymentApp": {
+    "oneTimePayment": {
+      "home": {
+        "title": "One Time Payments",
+        "createLabel": "One Time Payment erstellen",
+        "createOrEditLabel": "One Time Payment erstellen oder bearbeiten",
+        "notFound": "No One Time Payment found"
+      },
+      "created": "One Time Payment erstellt mit ID {{ param }}",
+      "updated": "One Time Payment aktualisiert mit ID {{ param }}",
+      "deleted": "One Time Payment gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll One Time Payment {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "One Time Payment"
+      },
+      "amount": "Amount",
+      "paymentDue": "Payment Due",
+      "contractorID": "Contractor ID",
+      "wDContractor": "W D Contractor",
+      "lDAPContractor": "L DAP Contractor",
+      "help": {
+        "amount": "The firstname attribute."
+      }
+    }
+  }
+}

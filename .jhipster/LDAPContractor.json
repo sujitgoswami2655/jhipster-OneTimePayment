@@ -1,0 +1,51 @@
+{
+    "name": "LDAPContractor",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "commissionPct",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "contractorID",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "oneTimePayment",
+            "otherEntityRelationshipName": "lDAPContractor",
+            "relationshipName": "contractorID"
+        }
+    ],
+    "changelogDate": "20190620173148",
+    "entityTableName": "ldap_contractor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

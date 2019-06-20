@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="wDContractor">
+            <h2><span jhiTranslate="pocOneTimePaymentApp.wDContractor.detail.title">WD Contractor</span> {{wDContractor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.firstName" [ngbTooltip]="'pocOneTimePaymentApp.wDContractor.help.firstName' | translate">First Name</span></dt>
+                <dd>
+                    <span>{{wDContractor.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{wDContractor.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.email">Email</span></dt>
+                <dd>
+                    <span>{{wDContractor.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{wDContractor.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{wDContractor.startDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.commissionPct">Commission Pct</span></dt>
+                <dd>
+                    <span>{{wDContractor.commissionPct}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.workdayNo">Workday No</span></dt>
+                <dd>
+                    <span>{{wDContractor.workdayNo}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.wDContractor.contractorID">Contractor ID</span></dt>
+                <dd>
+                    <span>{{wDContractor.contractorID}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/wd-contractor', wDContractor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
