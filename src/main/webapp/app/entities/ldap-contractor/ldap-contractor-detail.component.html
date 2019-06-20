@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lDAPContractor">
+            <h2><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.detail.title">LDAP Contractor</span> {{lDAPContractor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.firstName" [ngbTooltip]="'pocOneTimePaymentApp.lDAPContractor.help.firstName' | translate">First Name</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.email">Email</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.startDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.commissionPct">Commission Pct</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.commissionPct}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.lDAPContractor.contractorID">Contractor ID</span></dt>
+                <dd>
+                    <span>{{lDAPContractor.contractorID}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ldap-contractor', lDAPContractor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

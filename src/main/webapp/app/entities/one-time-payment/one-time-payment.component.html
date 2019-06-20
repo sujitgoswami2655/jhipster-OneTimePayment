@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.home.title">One Time Payments</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-one-time-payment" [routerLink]="['/one-time-payment/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="pocOneTimePaymentApp.oneTimePayment.home.createLabel">
+            Create new One Time Payment
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="oneTimePayments?.length === 0">
+        <span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.home.notFound">No oneTimePayments found</span>
+    </div>
+    <div class="table-responsive" *ngIf="oneTimePayments?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.amount">Amount</span></th>
+            <th><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.paymentDue">Payment Due</span></th>
+            <th><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.contractorID">Contractor ID</span></th>
+            <th><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.wDContractor">W D Contractor</span></th>
+            <th><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.lDAPContractor">L DAP Contractor</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let oneTimePayment of oneTimePayments ;trackBy: trackId">
+                <td><a [routerLink]="['/one-time-payment', oneTimePayment.id, 'view' ]">{{oneTimePayment.id}}</a></td>
+                <td>{{oneTimePayment.amount}}</td>
+                <td>{{oneTimePayment.paymentDue | date:'medium'}}</td>
+                <td>{{oneTimePayment.contractorID}}</td>
+                <td>
+                    <div *ngIf="oneTimePayment.wDContractor">
+                        <a [routerLink]="['../wd-contractor', oneTimePayment.wDContractor?.id, 'view' ]" >{{oneTimePayment.wDContractor?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="oneTimePayment.lDAPContractor">
+                        <a [routerLink]="['../ldap-contractor', oneTimePayment.lDAPContractor?.id, 'view' ]" >{{oneTimePayment.lDAPContractor?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/one-time-payment', oneTimePayment.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/one-time-payment', oneTimePayment.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'one-time-payment', { outlets: { popup: oneTimePayment.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

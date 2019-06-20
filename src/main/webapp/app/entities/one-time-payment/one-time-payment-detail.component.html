@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="oneTimePayment">
+            <h2><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.detail.title">One Time Payment</span> {{oneTimePayment.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.amount" [ngbTooltip]="'pocOneTimePaymentApp.oneTimePayment.help.amount' | translate">Amount</span></dt>
+                <dd>
+                    <span>{{oneTimePayment.amount}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.paymentDue">Payment Due</span></dt>
+                <dd>
+                    <span>{{oneTimePayment.paymentDue}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.contractorID">Contractor ID</span></dt>
+                <dd>
+                    <span>{{oneTimePayment.contractorID}}</span>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.wDContractor">W D Contractor</span></dt>
+                <dd>
+                    <div *ngIf="oneTimePayment.wDContractor">
+                        <a [routerLink]="['/wd-contractor', oneTimePayment.wDContractor?.id, 'view']">{{oneTimePayment.wDContractor?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.oneTimePayment.lDAPContractor">L DAP Contractor</span></dt>
+                <dd>
+                    <div *ngIf="oneTimePayment.lDAPContractor">
+                        <a [routerLink]="['/ldap-contractor', oneTimePayment.lDAPContractor?.id, 'view']">{{oneTimePayment.lDAPContractor?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/one-time-payment', oneTimePayment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

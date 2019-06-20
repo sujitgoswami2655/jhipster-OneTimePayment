@@ -1,0 +1,33 @@
+{
+  "pocOneTimePaymentApp": {
+    "wDContractor": {
+      "home": {
+        "title": "WD Contractors",
+        "createLabel": "WD Contractor erstellen",
+        "createOrEditLabel": "WD Contractor erstellen oder bearbeiten",
+        "notFound": "No WD Contractor found"
+      },
+      "created": "WD Contractor erstellt mit ID {{ param }}",
+      "updated": "WD Contractor aktualisiert mit ID {{ param }}",
+      "deleted": "WD Contractor gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll WD Contractor {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "WD Contractor"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "startDate": "Start Date",
+      "commissionPct": "Commission Pct",
+      "workdayNo": "Workday No",
+      "contractorID": "Contractor ID",
+      "contractorID": "Contractor ID",
+      "help": {
+        "firstName": "The firstname attribute."
+      }
+    }
+  }
+}
