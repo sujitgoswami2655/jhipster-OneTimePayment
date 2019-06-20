@@ -1,0 +1,41 @@
+entity WDContractor {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	startDate Instant,
+	commissionPct Long,
+	workdayNo String,
+	contractorID String
+}
+
+entity LDAPContractor {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	startDate Instant,
+	commissionPct Long,
+	contractorID String
+}
+
+entity OneTimePayment {
+	/**
+	* The firstname attribute.
+	*/
+	amount String,
+	paymentDue Instant,
+	contractorID String
+}
+relationship OneToMany {
+	WDContractor{contractorID}to OneTimePayment
+}
+relationship OneToMany {
+	LDAPContractor{contractorID}to OneTimePayment
+}
