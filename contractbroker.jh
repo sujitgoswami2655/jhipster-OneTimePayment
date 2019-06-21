@@ -26,8 +26,8 @@ entity DueOneTimePayment {
 	contractorID String
 }
 relationship OneToMany {
-	WDContractor{contractorID}to DueOneTimePayment{contractorID}
+	WDContractor{contractorID}to DueOneTimePayment
 }
 relationship OneToMany {
-	LDAPContractor{contractorID}to DueOneTimePayment{contractorID}
+	LDAPContractor{contractorID}to DueOneTimePayment
 }
