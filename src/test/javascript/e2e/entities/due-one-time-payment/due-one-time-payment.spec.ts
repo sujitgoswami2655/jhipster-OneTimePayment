@@ -47,8 +47,8 @@ describe('DueOneTimePayment e2e test', () => {
       dueOneTimePaymentUpdatePage.setAmountInput('5'),
       dueOneTimePaymentUpdatePage.setPaymentDueDateInput('01/01/2001' + protractor.Key.TAB + '02:30AM'),
       dueOneTimePaymentUpdatePage.setContractorIDInput('contractorID'),
-      dueOneTimePaymentUpdatePage.contractorIDSelectLastOption(),
-      dueOneTimePaymentUpdatePage.contractorIDSelectLastOption()
+      dueOneTimePaymentUpdatePage.wDContractorSelectLastOption(),
+      dueOneTimePaymentUpdatePage.lDAPContractorSelectLastOption()
     ]);
     expect(await dueOneTimePaymentUpdatePage.getAmountInput()).to.eq('5', 'Expected amount value to be equals to 5');
     expect(await dueOneTimePaymentUpdatePage.getPaymentDueDateInput()).to.contain(

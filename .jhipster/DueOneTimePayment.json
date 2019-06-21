@@ -16,21 +16,19 @@
     ],
     "relationships": [
         {
-            "relationshipType": "many-to-one",
+            "relationshipName": "wDContractor",
             "otherEntityName": "wDContractor",
-            "otherEntityRelationshipName": "contractorID",
-            "relationshipName": "contractorID",
+            "relationshipType": "many-to-one",
             "otherEntityField": "id"
         },
         {
-            "relationshipType": "many-to-one",
+            "relationshipName": "lDAPContractor",
             "otherEntityName": "lDAPContractor",
-            "otherEntityRelationshipName": "contractorID",
-            "relationshipName": "contractorID",
+            "relationshipType": "many-to-one",
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190621160720",
+    "changelogDate": "20190621162347",
     "entityTableName": "due_one_time_payment",
     "dto": "no",
     "pagination": "no",

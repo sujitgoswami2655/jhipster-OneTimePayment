@@ -29,8 +29,8 @@ export class DueOneTimePaymentUpdatePage {
   amountInput = element(by.id('field_amount'));
   paymentDueDateInput = element(by.id('field_paymentDueDate'));
   contractorIDInput = element(by.id('field_contractorID'));
-  contractorIDSelect = element(by.id('field_contractorID'));
-  contractorIDSelect = element(by.id('field_contractorID'));
+  wDContractorSelect = element(by.id('field_wDContractor'));
+  lDAPContractorSelect = element(by.id('field_lDAPContractor'));
 
   async getPageTitle() {
     return this.pageTitle.getAttribute('jhiTranslate');
@@ -60,42 +60,42 @@ export class DueOneTimePaymentUpdatePage {
     return await this.contractorIDInput.getAttribute('value');
   }
 
-  async contractorIDSelectLastOption(timeout?: number) {
-    await this.contractorIDSelect
+  async wDContractorSelectLastOption(timeout?: number) {
+    await this.wDContractorSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async contractorIDSelectOption(option) {
-    await this.contractorIDSelect.sendKeys(option);
+  async wDContractorSelectOption(option) {
+    await this.wDContractorSelect.sendKeys(option);
   }
 
-  getContractorIDSelect(): ElementFinder {
-    return this.contractorIDSelect;
+  getWDContractorSelect(): ElementFinder {
+    return this.wDContractorSelect;
   }
 
-  async getContractorIDSelectedOption() {
-    return await this.contractorIDSelect.element(by.css('option:checked')).getText();
+  async getWDContractorSelectedOption() {
+    return await this.wDContractorSelect.element(by.css('option:checked')).getText();
   }
 
-  async contractorIDSelectLastOption(timeout?: number) {
-    await this.contractorIDSelect
+  async lDAPContractorSelectLastOption(timeout?: number) {
+    await this.lDAPContractorSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async contractorIDSelectOption(option) {
-    await this.contractorIDSelect.sendKeys(option);
+  async lDAPContractorSelectOption(option) {
+    await this.lDAPContractorSelect.sendKeys(option);
   }
 
-  getContractorIDSelect(): ElementFinder {
-    return this.contractorIDSelect;
+  getLDAPContractorSelect(): ElementFinder {
+    return this.lDAPContractorSelect;
   }
 
-  async getContractorIDSelectedOption() {
-    return await this.contractorIDSelect.element(by.css('option:checked')).getText();
+  async getLDAPContractorSelectedOption() {
+    return await this.lDAPContractorSelect.element(by.css('option:checked')).getText();
   }
 
   async save(timeout?: number) {

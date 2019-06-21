@@ -27,17 +27,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.contractorID" for="field_contractorID">Contractor ID</label>
-                    <select class="form-control" id="field_contractorID" name="contractorID" formControlName="contractorID">
+                    <label class="form-control-label" jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.wDContractor" for="field_wDContractor">W D Contractor</label>
+                    <select class="form-control" id="field_wDContractor" name="wDContractor" formControlName="wDContractor">
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="wDContractorOption.id === editForm.get('contractorID').value?.id ? editForm.get('contractorID').value : wDContractorOption" *ngFor="let wDContractorOption of wdcontractors; trackBy: trackWDContractorById">{{wDContractorOption.id}}</option>
+                        <option [ngValue]="wDContractorOption.id === editForm.get('wDContractor').value?.id ? editForm.get('wDContractor').value : wDContractorOption" *ngFor="let wDContractorOption of wdcontractors; trackBy: trackWDContractorById">{{wDContractorOption.id}}</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.contractorID" for="field_contractorID">Contractor ID</label>
-                    <select class="form-control" id="field_contractorID" name="contractorID" formControlName="contractorID">
+                    <label class="form-control-label" jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.lDAPContractor" for="field_lDAPContractor">L DAP Contractor</label>
+                    <select class="form-control" id="field_lDAPContractor" name="lDAPContractor" formControlName="lDAPContractor">
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="lDAPContractorOption.id === editForm.get('contractorID').value?.id ? editForm.get('contractorID').value : lDAPContractorOption" *ngFor="let lDAPContractorOption of ldapcontractors; trackBy: trackLDAPContractorById">{{lDAPContractorOption.id}}</option>
+                        <option [ngValue]="lDAPContractorOption.id === editForm.get('lDAPContractor').value?.id ? editForm.get('lDAPContractor').value : lDAPContractorOption" *ngFor="let lDAPContractorOption of ldapcontractors; trackBy: trackLDAPContractorById">{{lDAPContractorOption.id}}</option>
                     </select>
                 </div>
             </div>

@@ -156,13 +156,13 @@ public class LDAPContractor implements Serializable {
 
     public LDAPContractor addContractorID(DueOneTimePayment dueOneTimePayment) {
         this.contractorIDS.add(dueOneTimePayment);
-        dueOneTimePayment.setContractorID(this);
+        dueOneTimePayment.setLDAPContractor(this);
         return this;
     }
 
     public LDAPContractor removeContractorID(DueOneTimePayment dueOneTimePayment) {
         this.contractorIDS.remove(dueOneTimePayment);
-        dueOneTimePayment.setContractorID(null);
+        dueOneTimePayment.setLDAPContractor(null);
         return this;
     }
 

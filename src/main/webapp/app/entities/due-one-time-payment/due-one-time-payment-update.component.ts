@@ -30,8 +30,8 @@ export class DueOneTimePaymentUpdateComponent implements OnInit {
     amount: [],
     paymentDueDate: [],
     contractorID: [],
-    contractorID: [],
-    contractorID: []
+    wDContractor: [],
+    lDAPContractor: []
   });
 
   constructor(
@@ -70,8 +70,8 @@ export class DueOneTimePaymentUpdateComponent implements OnInit {
       amount: dueOneTimePayment.amount,
       paymentDueDate: dueOneTimePayment.paymentDueDate != null ? dueOneTimePayment.paymentDueDate.format(DATE_TIME_FORMAT) : null,
       contractorID: dueOneTimePayment.contractorID,
-      contractorID: dueOneTimePayment.contractorID,
-      contractorID: dueOneTimePayment.contractorID
+      wDContractor: dueOneTimePayment.wDContractor,
+      lDAPContractor: dueOneTimePayment.lDAPContractor
     });
   }
 
@@ -99,8 +99,8 @@ export class DueOneTimePaymentUpdateComponent implements OnInit {
           ? moment(this.editForm.get(['paymentDueDate']).value, DATE_TIME_FORMAT)
           : undefined,
       contractorID: this.editForm.get(['contractorID']).value,
-      contractorID: this.editForm.get(['contractorID']).value,
-      contractorID: this.editForm.get(['contractorID']).value
+      wDContractor: this.editForm.get(['wDContractor']).value,
+      lDAPContractor: this.editForm.get(['lDAPContractor']).value
     };
   }
 

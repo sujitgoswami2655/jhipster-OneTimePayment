@@ -38,11 +38,11 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "dueOneTimePayment",
-            "otherEntityRelationshipName": "contractorID",
+            "otherEntityRelationshipName": "wDContractor",
             "relationshipName": "contractorID"
         }
     ],
-    "changelogDate": "20190621160718",
+    "changelogDate": "20190621162345",
     "entityTableName": "wd_contractor",
     "dto": "no",
     "pagination": "no",

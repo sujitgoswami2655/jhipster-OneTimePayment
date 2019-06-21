@@ -172,13 +172,13 @@ public class WDContractor implements Serializable {
 
     public WDContractor addContractorID(DueOneTimePayment dueOneTimePayment) {
         this.contractorIDS.add(dueOneTimePayment);
-        dueOneTimePayment.setContractorID(this);
+        dueOneTimePayment.setWDContractor(this);
         return this;
     }
 
     public WDContractor removeContractorID(DueOneTimePayment dueOneTimePayment) {
         this.contractorIDS.remove(dueOneTimePayment);
-        dueOneTimePayment.setContractorID(null);
+        dueOneTimePayment.setWDContractor(null);
         return this;
     }
 
