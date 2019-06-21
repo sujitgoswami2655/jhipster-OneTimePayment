@@ -34,11 +34,11 @@
         {
             "relationshipType": "one-to-many",
             "otherEntityName": "dueOneTimePayment",
-            "otherEntityRelationshipName": "contractorID",
+            "otherEntityRelationshipName": "lDAPContractor",
             "relationshipName": "contractorID"
         }
     ],
-    "changelogDate": "20190621160719",
+    "changelogDate": "20190621162346",
     "entityTableName": "ldap_contractor",
     "dto": "no",
     "pagination": "no",

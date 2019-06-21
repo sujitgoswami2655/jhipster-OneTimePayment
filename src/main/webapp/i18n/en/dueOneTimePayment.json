@@ -19,8 +19,8 @@
       "amount": "Amount",
       "paymentDueDate": "Payment Due Date",
       "contractorID": "Contractor ID",
-      "contractorID": "Contractor ID",
-      "contractorID": "Contractor ID"
+      "wDContractor": "W D Contractor",
+      "lDAPContractor": "L DAP Contractor"
     }
   }
 }

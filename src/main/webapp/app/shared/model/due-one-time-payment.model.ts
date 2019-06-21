@@ -7,8 +7,8 @@ export interface IDueOneTimePayment {
   amount?: number;
   paymentDueDate?: Moment;
   contractorID?: string;
-  contractorID?: IWDContractor;
-  contractorID?: ILDAPContractor;
+  wDContractor?: IWDContractor;
+  lDAPContractor?: ILDAPContractor;
 }
 
 export class DueOneTimePayment implements IDueOneTimePayment {
@@ -17,7 +17,7 @@ export class DueOneTimePayment implements IDueOneTimePayment {
     public amount?: number,
     public paymentDueDate?: Moment,
     public contractorID?: string,
-    public contractorID?: IWDContractor,
-    public contractorID?: ILDAPContractor
+    public wDContractor?: IWDContractor,
+    public lDAPContractor?: ILDAPContractor
   ) {}
 }

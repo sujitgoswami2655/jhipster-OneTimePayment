@@ -17,16 +17,16 @@
                 <dd>
                     <span>{{dueOneTimePayment.contractorID}}</span>
                 </dd>
-                <dt><span jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.contractorID">Contractor ID</span></dt>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.wDContractor">W D Contractor</span></dt>
                 <dd>
-                    <div *ngIf="dueOneTimePayment.contractorID">
-                        <a [routerLink]="['/wd-contractor', dueOneTimePayment.contractorID?.id, 'view']">{{dueOneTimePayment.contractorID?.id}}</a>
+                    <div *ngIf="dueOneTimePayment.wDContractor">
+                        <a [routerLink]="['/wd-contractor', dueOneTimePayment.wDContractor?.id, 'view']">{{dueOneTimePayment.wDContractor?.id}}</a>
                     </div>
                 </dd>
-                <dt><span jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.contractorID">Contractor ID</span></dt>
+                <dt><span jhiTranslate="pocOneTimePaymentApp.dueOneTimePayment.lDAPContractor">L DAP Contractor</span></dt>
                 <dd>
-                    <div *ngIf="dueOneTimePayment.contractorID">
-                        <a [routerLink]="['/ldap-contractor', dueOneTimePayment.contractorID?.id, 'view']">{{dueOneTimePayment.contractorID?.id}}</a>
+                    <div *ngIf="dueOneTimePayment.lDAPContractor">
+                        <a [routerLink]="['/ldap-contractor', dueOneTimePayment.lDAPContractor?.id, 'view']">{{dueOneTimePayment.lDAPContractor?.id}}</a>
                     </div>
                 </dd>
             </dl>

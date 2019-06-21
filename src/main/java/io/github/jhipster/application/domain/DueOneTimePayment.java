@@ -29,14 +29,14 @@ public class DueOneTimePayment implements Serializable {
     private String contractorID;
 
     @DBRef
-    @Field("contractorID")
-    @JsonIgnoreProperties("contractorIDS")
-    private WDContractor contractorID;
+    @Field("wDContractor")
+    @JsonIgnoreProperties("dueOneTimePayments")
+    private WDContractor wDContractor;
 
     @DBRef
-    @Field("contractorID")
-    @JsonIgnoreProperties("contractorIDS")
-    private LDAPContractor contractorID;
+    @Field("lDAPContractor")
+    @JsonIgnoreProperties("dueOneTimePayments")
+    private LDAPContractor lDAPContractor;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -86,30 +86,30 @@ public class DueOneTimePayment implements Serializable {
         this.contractorID = contractorID;
     }
 
-    public WDContractor getContractorID() {
-        return contractorID;
+    public WDContractor getWDContractor() {
+        return wDContractor;
     }
 
-    public DueOneTimePayment contractorID(WDContractor wDContractor) {
-        this.contractorID = wDContractor;
+    public DueOneTimePayment wDContractor(WDContractor wDContractor) {
+        this.wDContractor = wDContractor;
         return this;
     }
 
-    public void setContractorID(WDContractor wDContractor) {
-        this.contractorID = wDContractor;
+    public void setWDContractor(WDContractor wDContractor) {
+        this.wDContractor = wDContractor;
     }
 
-    public LDAPContractor getContractorID() {
-        return contractorID;
+    public LDAPContractor getLDAPContractor() {
+        return lDAPContractor;
     }
 
-    public DueOneTimePayment contractorID(LDAPContractor lDAPContractor) {
-        this.contractorID = lDAPContractor;
+    public DueOneTimePayment lDAPContractor(LDAPContractor lDAPContractor) {
+        this.lDAPContractor = lDAPContractor;
         return this;
     }
 
-    public void setContractorID(LDAPContractor lDAPContractor) {
-        this.contractorID = lDAPContractor;
+    public void setLDAPContractor(LDAPContractor lDAPContractor) {
+        this.lDAPContractor = lDAPContractor;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
