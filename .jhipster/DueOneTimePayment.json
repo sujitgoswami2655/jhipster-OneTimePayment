@@ -1,0 +1,42 @@
+{
+    "name": "DueOneTimePayment",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentDueDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "contractorID",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "wDContractor",
+            "otherEntityRelationshipName": "contractorID",
+            "relationshipName": "contractorID",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "lDAPContractor",
+            "otherEntityRelationshipName": "contractorID",
+            "relationshipName": "contractorID",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190621160720",
+    "entityTableName": "due_one_time_payment",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

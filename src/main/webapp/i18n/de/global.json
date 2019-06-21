@@ -10,6 +10,7 @@
         "wdContractor": "WD Contractor",
         "ldapContractor": "LDAP Contractor",
         "oneTimePayment": "One Time Payment",
+        "dueOneTimePayment": "Due One Time Payment",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

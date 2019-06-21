@@ -65,7 +65,7 @@ export class WDContractorUpdateComponent implements OnInit {
   }
 
   private createFromForm(): IWDContractor {
-    const entity = {
+    return {
       ...new WDContractor(),
       id: this.editForm.get(['id']).value,
       firstName: this.editForm.get(['firstName']).value,
@@ -78,11 +78,10 @@ export class WDContractorUpdateComponent implements OnInit {
       workdayNo: this.editForm.get(['workdayNo']).value,
       contractorID: this.editForm.get(['contractorID']).value
     };
-    return entity;
   }
 
   protected subscribeToSaveResponse(result: Observable<HttpResponse<IWDContractor>>) {
-    result.subscribe((res: HttpResponse<IWDContractor>) => this.onSaveSuccess(), (res: HttpErrorResponse) => this.onSaveError());
+    result.subscribe(() => this.onSaveSuccess(), () => this.onSaveError());
   }
 
   protected onSaveSuccess() {

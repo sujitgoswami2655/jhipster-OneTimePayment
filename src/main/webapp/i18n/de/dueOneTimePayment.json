@@ -1,0 +1,26 @@
+{
+  "pocOneTimePaymentApp": {
+    "dueOneTimePayment": {
+      "home": {
+        "title": "Due One Time Payments",
+        "createLabel": "Due One Time Payment erstellen",
+        "createOrEditLabel": "Due One Time Payment erstellen oder bearbeiten",
+        "notFound": "No Due One Time Payment found"
+      },
+      "created": "Due One Time Payment erstellt mit ID {{ param }}",
+      "updated": "Due One Time Payment aktualisiert mit ID {{ param }}",
+      "deleted": "Due One Time Payment gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Due One Time Payment {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Due One Time Payment"
+      },
+      "amount": "Amount",
+      "paymentDueDate": "Payment Due Date",
+      "contractorID": "Contractor ID",
+      "contractorID": "Contractor ID",
+      "contractorID": "Contractor ID"
+    }
+  }
+}

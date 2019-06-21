@@ -63,7 +63,7 @@ export class LDAPContractorUpdateComponent implements OnInit {
   }
 
   private createFromForm(): ILDAPContractor {
-    const entity = {
+    return {
       ...new LDAPContractor(),
       id: this.editForm.get(['id']).value,
       firstName: this.editForm.get(['firstName']).value,
@@ -75,11 +75,10 @@ export class LDAPContractorUpdateComponent implements OnInit {
       commissionPct: this.editForm.get(['commissionPct']).value,
       contractorID: this.editForm.get(['contractorID']).value
     };
-    return entity;
   }
 
   protected subscribeToSaveResponse(result: Observable<HttpResponse<ILDAPContractor>>) {
-    result.subscribe((res: HttpResponse<ILDAPContractor>) => this.onSaveSuccess(), (res: HttpErrorResponse) => this.onSaveError());
+    result.subscribe(() => this.onSaveSuccess(), () => this.onSaveError());
   }
 
   protected onSaveSuccess() {

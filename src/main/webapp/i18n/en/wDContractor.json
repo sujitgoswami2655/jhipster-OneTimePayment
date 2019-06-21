@@ -24,10 +24,7 @@
       "commissionPct": "Commission Pct",
       "workdayNo": "Workday No",
       "contractorID": "Contractor ID",
-      "contractorID": "Contractor ID",
-      "help": {
-        "firstName": "The firstname attribute."
-      }
+      "contractorID": "Contractor ID"
     }
   }
 }

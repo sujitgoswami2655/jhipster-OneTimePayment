@@ -289,7 +289,7 @@ public class WDContractorResourceIT {
             .accept(TestUtil.APPLICATION_JSON_UTF8))
             .andExpect(status().isNoContent());
 
-        // Validate the database is empty
+        // Validate the database contains one less item
         List<WDContractor> wDContractorList = wDContractorRepository.findAll();
         assertThat(wDContractorList).hasSize(databaseSizeBeforeDelete - 1);
     }

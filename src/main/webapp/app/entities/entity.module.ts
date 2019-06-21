@@ -15,6 +15,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'one-time-payment',
         loadChildren: './one-time-payment/one-time-payment.module#PocOneTimePaymentOneTimePaymentModule'
+      },
+      {
+        path: 'due-one-time-payment',
+        loadChildren: './due-one-time-payment/due-one-time-payment.module#PocOneTimePaymentDueOneTimePaymentModule'
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

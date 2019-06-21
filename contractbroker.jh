@@ -1,7 +1,4 @@
 entity WDContractor {
-	/**
-	* The firstname attribute.
-	*/
 	firstName String,
 	lastName String,
 	email String,
@@ -13,9 +10,6 @@ entity WDContractor {
 }
 
 entity LDAPContractor {
-	/**
-	* The firstname attribute.
-	*/
 	firstName String,
 	lastName String,
 	email String,
@@ -25,17 +19,15 @@ entity LDAPContractor {
 	contractorID String
 }
 
-entity OneTimePayment {
-	/**
-	* The firstname attribute.
-	*/
-	amount String,
-	paymentDue Instant,
+entity DueOneTimePayment {
+
+	amount Double,
+	paymentDueDate Instant,
 	contractorID String
 }
 relationship OneToMany {
-	WDContractor{contractorID}to OneTimePayment
+	WDContractor{contractorID}to DueOneTimePayment{contractorID}
 }
 relationship OneToMany {
-	LDAPContractor{contractorID}to OneTimePayment
+	LDAPContractor{contractorID}to DueOneTimePayment{contractorID}
 }

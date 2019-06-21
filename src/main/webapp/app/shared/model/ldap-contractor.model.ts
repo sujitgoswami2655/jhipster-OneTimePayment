@@ -1,5 +1,5 @@
 import { Moment } from 'moment';
-import { IOneTimePayment } from 'app/shared/model/one-time-payment.model';
+import { IDueOneTimePayment } from 'app/shared/model/due-one-time-payment.model';
 
 export interface ILDAPContractor {
   id?: string;
@@ -10,7 +10,7 @@ export interface ILDAPContractor {
   startDate?: Moment;
   commissionPct?: number;
   contractorID?: string;
-  contractorIDS?: IOneTimePayment[];
+  contractorIDS?: IDueOneTimePayment[];
 }
 
 export class LDAPContractor implements ILDAPContractor {
@@ -23,6 +23,6 @@ export class LDAPContractor implements ILDAPContractor {
     public startDate?: Moment,
     public commissionPct?: number,
     public contractorID?: string,
-    public contractorIDS?: IOneTimePayment[]
+    public contractorIDS?: IDueOneTimePayment[]
   ) {}
 }
