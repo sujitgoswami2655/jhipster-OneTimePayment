@@ -3,7 +3,6 @@
     "fields": [
         {
             "fieldName": "firstName",
-            "javadoc": "The firstname attribute.",
             "fieldType": "String"
         },
         {
@@ -34,12 +33,12 @@
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "otherEntityName": "oneTimePayment",
-            "otherEntityRelationshipName": "lDAPContractor",
+            "otherEntityName": "dueOneTimePayment",
+            "otherEntityRelationshipName": "contractorID",
             "relationshipName": "contractorID"
         }
     ],
-    "changelogDate": "20190620173148",
+    "changelogDate": "20190621160719",
     "entityTableName": "ldap_contractor",
     "dto": "no",
     "pagination": "no",

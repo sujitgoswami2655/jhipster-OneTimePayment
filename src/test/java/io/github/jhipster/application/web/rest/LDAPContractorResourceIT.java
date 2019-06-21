@@ -279,7 +279,7 @@ public class LDAPContractorResourceIT {
             .accept(TestUtil.APPLICATION_JSON_UTF8))
             .andExpect(status().isNoContent());
 
-        // Validate the database is empty
+        // Validate the database contains one less item
         List<LDAPContractor> lDAPContractorList = lDAPContractorRepository.findAll();
         assertThat(lDAPContractorList).hasSize(databaseSizeBeforeDelete - 1);
     }

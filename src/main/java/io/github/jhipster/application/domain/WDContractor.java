@@ -1,5 +1,4 @@
 package io.github.jhipster.application.domain;
-import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -21,10 +20,6 @@ public class WDContractor implements Serializable {
     @Id
     private String id;
 
-    /**
-     * The firstname attribute.
-     */
-    @ApiModelProperty(value = "The firstname attribute.")
     @Field("first_name")
     private String firstName;
 
@@ -51,7 +46,7 @@ public class WDContractor implements Serializable {
 
     @DBRef
     @Field("contractorID")
-    private Set<OneTimePayment> contractorIDS = new HashSet<>();
+    private Set<DueOneTimePayment> contractorIDS = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -166,29 +161,29 @@ public class WDContractor implements Serializable {
         this.contractorID = contractorID;
     }
 
-    public Set<OneTimePayment> getContractorIDS() {
+    public Set<DueOneTimePayment> getContractorIDS() {
         return contractorIDS;
     }
 
-    public WDContractor contractorIDS(Set<OneTimePayment> oneTimePayments) {
-        this.contractorIDS = oneTimePayments;
+    public WDContractor contractorIDS(Set<DueOneTimePayment> dueOneTimePayments) {
+        this.contractorIDS = dueOneTimePayments;
         return this;
     }
 
-    public WDContractor addContractorID(OneTimePayment oneTimePayment) {
-        this.contractorIDS.add(oneTimePayment);
-        oneTimePayment.setWDContractor(this);
+    public WDContractor addContractorID(DueOneTimePayment dueOneTimePayment) {
+        this.contractorIDS.add(dueOneTimePayment);
+        dueOneTimePayment.setContractorID(this);
         return this;
     }
 
-    public WDContractor removeContractorID(OneTimePayment oneTimePayment) {
-        this.contractorIDS.remove(oneTimePayment);
-        oneTimePayment.setWDContractor(null);
+    public WDContractor removeContractorID(DueOneTimePayment dueOneTimePayment) {
+        this.contractorIDS.remove(dueOneTimePayment);
+        dueOneTimePayment.setContractorID(null);
         return this;
     }
 
-    public void setContractorIDS(Set<OneTimePayment> oneTimePayments) {
-        this.contractorIDS = oneTimePayments;
+    public void setContractorIDS(Set<DueOneTimePayment> dueOneTimePayments) {
+        this.contractorIDS = dueOneTimePayments;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
